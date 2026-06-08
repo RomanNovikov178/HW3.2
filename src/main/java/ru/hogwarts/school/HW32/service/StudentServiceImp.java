@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @Service
 public class StudentServiceImp implements StudentService {
 
-    private long lastId = 0;
+    long lastId = 0;
     Map<Long, Student> students = new HashMap<>();
 
     @Override

@@ -9,11 +9,15 @@ import java.util.stream.Collectors;
 @Service
 public class FacultServiceImp implements FacultService {
     private long lastId = 0;
+
+    public long getLastId() { /// временно!!!
+        return lastId;
+    }
+
     Map<Long, Faculty> facults = new HashMap<>();
 
     @Override
     public Faculty creatFaculty(Faculty faculty) {
-
         faculty.setId(++lastId);
         facults.put(lastId, faculty);
         return faculty;
